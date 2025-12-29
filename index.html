@@ -4,49 +4,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <title>PokeVerse</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #EAE2B7;
+        }
+
+        section {
+            min-height: 100vh;
+            background-color: #FCBF49;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 40px;
+            border: 4px dashed #F77F00;
+            margin-left: 200px;
+        }
+
+        h1 {
+            color: #F77F00;
+            font-size: 36px;
+            font-family: "Orbitron", sans-serif;
+        }
+
+        p {
+            color: #003049;
+            font-size: 18px;
+            font-family: "Quantico", sans-serif;
+            line-height: 1
+        }
+
+        #side-bar {
+            background: #30B4FC;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 150px;
+            font-family: "Orbitron", sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        #region-list {
+            /* background: red; */
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .region-button {
+            background-color: #FCBF49;
+            border: 4px solid #EAE2B7;
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-family: "Orbitron", sans-serif;
+            cursor: pointer;
+        }
+
+        .region-button:hover {
+            background-color: #F77F00;
+        }
+
+        #home-picture {
+            border-radius: 20px;
+            height: 400px;
+        }
+    </style>
 </head>
 
 <body>
-    <nav id="side-bar" style="background: #F77F00;">
+    <nav id="side-bar">
         <img src="./images/pokename.png" height="40" />
-        <a href="#kanto-region">Kanto region</a>
+        <div id="region-list">
+            <button class="region-button" onclick="location.href='#home-section'">Home</button>
+
+            <button class="region-button" onclick="location.href='#kanto-region'">Kanto region</button>
+        </div>
+
+
+        <!-- <a href="#kanto-region">Kanto region</a> -->
     </nav>
 
     <section id="home-section">
         <h1>Welcome to the Pokeverse</h1>
-        <img src="./images/home-image.png" height="160" />
-        <p>Pokémon are creatures who have these magical powers which can help people do hard stuff and battle other
+        <img src="./images/home-image.png" height="80" id="home-picture" />
+
+        <p>Pokémon are creatures who have these magical powers which can
+            help people do hard stuff and
+            battle other
             peoples' Pokémon.This is the home of all things Pokemon. Explore the regions, meet the trainers, and catch
             'em
             all!
+
+            Location: Kanto is located east of the Johto region, with both sharing the same landmass.
+            Major Cities: Significant locations include Pallet Town (where journeys begin), Saffron City (the largest
+            city), and Lavender Town (known for its Pokémon Tower).
+            Games: Kanto is featured in the original Red, Blue, and Yellow versions, their remakes FireRed and
+            LeafGreen, and the Let's Go series. Pikachu: While the official mascot of the franchise, Pikachu is
+            specifically the starter in Pokémon Yellow and Pokémon: Let's Go, Pikachu!.
+            Legendary Trio: Kanto is home to the legendary birds: Articuno (Ice/Flying), Zapdos (Electric/Flying), and
+            Moltres (Fire/Flying).
+            Mewtwo & Mew: Mewtwo, a powerful Psychic-type created through genetic engineering, is found in Cerulean
+            Cave, while its progenitor Mew is a rare "Mythical" Pokémon.
         </p>
     </section>
 
     <section id="kanto-region">
         <h1>Kanto</h1>
         <img src="images/kanto-pokemon-2.jpg" height="600" />
-        <img src="images/pro-oak-starters.jpg" height=400 />
-        <img src="images/kanto-map.jpg" height=400 <p>The Kanto region is the first region introduced in the
-        Pokémon series.
-        It
-        is home to many iconic Pokémon
-        and the
-        original eight gyms.Kanto Pokémon are the original 151 creatures from the first generation of Pokémon games
-        (Red,
-        Blue, Yellow, FireRed, LeafGreen, Let's Go Pikachu/Eevee) set in the Kanto region, featuring iconic starters
-        like
-        Bulbasaur, Charmander, Squirtle, and legendaries such as Mewtwo and the Articuno, Zapdos, Moltres trio,
-        forming the
-        foundational Pokédex that introduced trainers to the world of Pokémon battles and exploration.The main Pokémon
-        Professor in the Kanto region is Professor Samuel Oak, based in Pallet Town, who studies human-Pokémon
-        relationships, gives starter Pokémon (Bulbasaur, Charmander, Squirtle) to new trainers, and tasks them with
-        completing the Pokédex. Other Kanto-related professors include Professor Cerise (studying world mysteries) and
-        Professor Friede, though Friede leads the Rising Volt Tacklers and is connected to Kanto through his past and
-        travels. In the Pokémon
-        anime, the Kanto region is the setting for Ash Ketchum's original journey and several subsequent arcs. While it
-        shares its basic layout with the video games, the anime version is significantly larger and includes numerous
-        exclusive locations that are not present in the games. </p>
+        <img src="images/pro-oak-starters.jpg" height=200 />
+        <img src="images/kanto-map.jpg" height=400>
+        <p>The Kanto region is the first region introduced in the
+            Pokémon series.
+            It
+            is home to many iconic Pokémon
+            and the
+            original eight gyms.Kanto Pokémon are the original 151 creatures from the first generation of Pokémon games
+            (Red,
+            Blue, Yellow, FireRed, LeafGreen, Let's Go Pikachu/Eevee) set in the Kanto region, featuring iconic starters
+            like
+            Bulbasaur, Charmander, Squirtle, and legendaries such as Mewtwo and the Articuno, Zapdos, Moltres trio,
+            forming the
+            foundational Pokédex that introduced trainers to the world of Pokémon battles and exploration.The main
+            Pokémon
+            Professor in the Kanto region is Professor Samuel Oak, based in Pallet Town, who studies human-Pokémon
+            relationships, gives starter Pokémon (Bulbasaur, Charmander, Squirtle) to new trainers, and tasks them with
+            completing the Pokédex. Other Kanto-related professors include Professor Cerise (studying world mysteries)
+            and
+            Professor Friede, though Friede leads the Rising Volt Tacklers and is connected to Kanto through his past
+            and
+            travels. In the Pokémon
+            anime, the Kanto region is the setting for Ash Ketchum's original journey and several subsequent arcs. While
+            it
+            shares its basic layout with the video games, the anime version is significantly larger and includes
+            numerous
+            exclusive locations that are not present in the games. </p>
     </section>
 
     <section id="johto-region"></section>
@@ -55,3 +160,8 @@
     <footer>
         <p>© 2025 Pokeverse Inc. Made by Zayn 😎</p>
     </footer>
+
+
+</body>
+
+</html>
